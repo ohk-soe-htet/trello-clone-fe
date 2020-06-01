@@ -29,6 +29,10 @@ nav div div {
     -o-border-radius: 5px;
 }
 
+nav div div:hover {
+    background-color: #8080803f;
+}
+
 #nav1 {
     display: flex;
 }
