@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trello</title>
     <link rel="stylesheet" href="./css/trello.css" />
-  </head>
-  <body>
-    <img src="./images/img.jpg" alt="beach" id="bgImg" />
+</head>
+
+<body>
+    <img src="./images/ytu1.jpg" alt="beach" id="bgImg" />
     <nav>
-      <div id="nav1">
-        <div id="project">Trello Clone</div>
-        <div id="star"><i class="far fa-star"></i></div>
-        <div class="separator"></div>
-        <div id="privacy">Private Team</div>
-        <div class="separator"></div>
-        <div id="visibility">
-          <i class="fas fa-user-friends"></i>&nbsp; &nbsp; Team Visible
+        <div id="nav1">
+            <div id="project">Trello Clone</div>
+            <div id="star" onclick="starColor()"><i class="far fa-star"></i></div>
+            <div class="separator"></div>
+            <div id="privacy">Private Team</div>
+            <div class="separator"></div>
+            <div id="visibility">
+                <i class="fas fa-user-friends"></i>&nbsp; &nbsp; Team Visible
+            </div>
+            <div class="separator"></div>
+            <div id="members"></div>
+            <div id="invite">Invite</div>
         </div>
-        <div class="separator"></div>
-        <div id="members"></div>
-        <div id="invite">Invite</div>
-      </div>
-      <div id="nav2">
-        <div id="bell"><i class="fas fa-concierge-bell"></i> &nbsp; Butler</div>
-        <div id="menu"><i class="fas fa-ellipsis-h"></i> &nbsp; Show Menu</div>
-      </div>
+        <div id="nav2">
+            <div id="bell"><i class="fas fa-concierge-bell"></i> &nbsp; Butler</div>
+            <div id="menu"><i class="fas fa-ellipsis-h"></i> &nbsp; Show Menu</div>
+        </div>
     </nav>
-    <script
-      src="https://kit.fontawesome.com/eef85430e7.js"
-      crossorigin="anonymous"
-    ></script>
+    <div id="lists">
+        <div class="list">
+            <div class="titleDiv">
+                <input type="text" class="title" value="test">
+                <i class="fas fa-ellipsis-h actionMenu"></i>
+            </div>
+            <div class="createdCard">
+                <input type="text" class="createdCTitle">
+            </div>
+            <form class="inpCard" onsubmit="addCard(event)">
+                <input type="text" placeholder="Enter a title for this card" class="cardTitle"><br>
+                <input type="submit" value="Add card" class="submitCard">
+                <i class="fas fa-times cancelCard" onclick="cancelAddCard(event)"></i>
+            </form>
+            <div class="cardDiv">
+                <div class="addCardDiv" onclick="inpCardDis(event)"> + Add a card</div>
+                <i class="fas fa-window-restore tem" title="Create from template..."></i>
+            </div>
+        </div>
+        <div id="addList" onclick="inpLiDisplay()"> + Add a list</div>
+        <form id="inpList" onsubmit="addList(event)">
+            <input type="text" placeholder="Enter list title" id="liTitle">
+            <input type="submit" value="Add list" id="submitLi">
+            <i class="fas fa-times" id="cancelLi" onclick="cancelAddLi()"></i>
+        </form>
+        <div id="marginR"></div>
+    </div>
+    <script src="https://kit.fontawesome.com/eef85430e7.js" crossorigin="anonymous"></script>
     <script src="./js/trello.js"></script>
-  </body>
+</body>
+
 </html>

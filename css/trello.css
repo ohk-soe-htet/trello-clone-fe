@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #bgImg {
@@ -8,10 +9,13 @@
     height: 100vh;
     position: fixed;
     z-index: -3;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
 }
 
 nav {
-    color: rgb(38, 22, 131);
+    color: #1a2412;
+    font-weight: 100;
     text-align: center;
     height: 35px;
     line-height: 35px;
@@ -22,15 +26,20 @@ nav {
 
 nav div div {
     background-color: #8080801e;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
 }
 
 nav div div:hover {
-    background-color: #8080803a;
+    background-color: #1615152d;
 }
 
 #nav1 {
@@ -44,8 +53,14 @@ nav div div:hover {
 
 #project {
     font-size: 20px;
+    font-weight: 600 !important;
     width: 120px;
     margin-right: 10px;
+    background-color: transparent !important;
+}
+
+#project:hover {
+    background-color: #4e4d4d1c !important;
 }
 
 #star {
@@ -83,4 +98,210 @@ nav div div:hover {
 #menu {
     margin-left: 10px;
     width: 120px;
+}
+
+#lists {
+    overflow-x: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#lists div,
+#lists form {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.list {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #f1f0f0;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.title {
+    font-size: 17px;
+    width: 200px;
+    height: 28px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.title:hover {
+    cursor: pointer;
+}
+
+.title:focus {
+    cursor: text;
+    border: 2px solid rgb(30, 97, 219);
+    background-color: #f2f2f2;
+}
+
+.actionMenu,
+.tem {
+    width: 30px;
+    height: 23px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #808080;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.actionMenu:hover,
+.tem:hover {
+    color: black;
+    background-color: #8080801e;
+    cursor: pointer;
+}
+
+.inpCard {
+    display: none;
+}
+
+.addCardDiv {
+    font-size: 15px;
+    color: gray;
+    width: 205px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    display: inline-block;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.addCardDiv:hover {
+    color: black;
+    cursor: pointer;
+    background-color: #8080801e;
+}
+
+.createdCTitle {
+    font-size: 15px;
+    cursor: pointer;
+    color: #505050;
+    width: 233px;
+    padding: 7px 10px;
+    border: none;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px 0 rgba(12, 12, 12, 0.3);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.createdCTitle:focus {
+    cursor: text;
+}
+
+.cardTitle {
+    font-size: 14px;
+    width: 233px;
+    height: 30px;
+    resize: none;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+#addList {
+    min-width: 236px;
+    max-width: 236px;
+    height: 40px;
+    background-color: #1615151a;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-left: 10px;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+}
+
+#addList:hover {
+    background-color: #1615152d;
+    cursor: pointer;
+}
+
+#inpList {
+    min-width: 240px;
+    max-width: 240px;
+    height: 78px;
+    padding: 8px;
+    background-color: #e1e1e1;
+    margin-left: 10px;
+    display: none;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+}
+
+#liTitle {
+    width: 227px;
+    height: 33px;
+    border: 2px solid rgb(30, 97, 219);
+    padding-left: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+#marginR {
+    min-width: 10px;
+}
+
+#submitLi,
+.submitCard {
+    font-size: 14px;
+    width: 90px;
+    height: 33px;
+    color: #f1f1f1;
+    font-weight: 600;
+    border: 1px solid transparent;
+    background-color: rgb(40, 156, 40);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+#cancelLi,
+.cancelCard {
+    display: inline-block;
+    font-size: 19px;
+    margin-left: 15px;
 }
