@@ -5,13 +5,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trello</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/trello.css" />
 </head>
 
 <body>
-    <img src="./images/ytu1.jpg" alt="beach" id="bgImg" />
-    <nav>
-        <div id="nav1">
+    <img src="./images/ytu1.jpg" alt="YTU Campus" id="bgImg" />
+    <nav id="fstNav">
+        <div id="fnav1">
+            <div id="home"><i class="fas fa-home"></i></div>
+            <div id="board"><i class="fab fa-trello"></i> &nbsp; Boards</div>
+            <div id="search">
+                <input type="text" id="searchInp" onclick="searchBar()">
+                <i class="fas fa-search" id="sIcon" onclick="searchBar()"></i>
+                <i class="fas fa-expand-arrows-alt" id="expand"></i>
+                <i class="fas fa-times" id="cancelSearch" onclick="cancelSearchBar()"></i>
+            </div>
+        </div>
+        <div id="trello"><i class="fab fa-trello"></i>
+            <span>Trello</span>
+        </div>
+        <div id="fnav2">
+            <div id="create">+</div>
+            <div id="bell"><i class="far fa-bell"></i></div>
+            <div id="setting"><i class="fas fa-cog"></i></div>
+        </div>
+    </nav>
+    <nav id="secNav">
+        <div id="snav1">
             <div id="project">Trello Clone</div>
             <div id="star" onclick="starColor()"><i class="far fa-star"></i></div>
             <div class="separator"></div>
@@ -24,19 +45,20 @@
             <div id="members"></div>
             <div id="invite">Invite</div>
         </div>
-        <div id="nav2">
-            <div id="bell"><i class="fas fa-concierge-bell"></i> &nbsp; Butler</div>
+        <div id="snav2">
+            <div id="butler"><i class="fas fa-concierge-bell"></i> &nbsp; Butler</div>
             <div id="menu"><i class="fas fa-ellipsis-h"></i> &nbsp; Show Menu</div>
         </div>
     </nav>
     <div id="lists">
-        <div class="list">
+        <!--
+            <div class="list">
             <div class="titleDiv">
                 <input type="text" class="title" value="test">
                 <i class="fas fa-ellipsis-h actionMenu"></i>
             </div>
             <div class="createdCard">
-                <input type="text" class="createdCTitle">
+                <input type="text" class="createdCTitle" value="Card">
             </div>
             <form class="inpCard" onsubmit="addCard(event)">
                 <input type="text" placeholder="Enter a title for this card" class="cardTitle"><br>
@@ -55,9 +77,11 @@
             <i class="fas fa-times" id="cancelLi" onclick="cancelAddLi()"></i>
         </form>
         <div id="marginR"></div>
-    </div>
-    <script src="https://kit.fontawesome.com/eef85430e7.js" crossorigin="anonymous"></script>
-    <script src="./js/trello.js"></script>
+    </div>  
+            -->
+
+        <script src="https://kit.fontawesome.com/eef85430e7.js" crossorigin="anonymous"></script>
+        <script src="./js/trello.js"></script>
 </body>
 
 </html>

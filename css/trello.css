@@ -13,7 +13,135 @@
     -webkit-filter: blur(3px);
 }
 
-nav {
+#fstNav {
+    color: #f2f2f2;
+    background-color: #1a24122a;
+    font-weight: 100;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 10px;
+}
+
+#fstNav div div {
+    background-color: rgba(255, 255, 255, 0.219);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+}
+
+#fstNav div div:hover {
+    background-color: #f2f2f211;
+}
+
+#fnav1 {
+    display: flex;
+}
+
+#fnav2 {
+    display: flex;
+}
+
+#fnav2 div:hover {
+    cursor: pointer;
+}
+
+#home {
+    width: 35px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#board {
+    width: 100px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#search {
+    width: 200px;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+}
+
+#searchInp {
+    border: none;
+    background-color: transparent;
+    width: 152px;
+    padding-left: 8px;
+}
+
+#sIcon {
+    display: inline-block;
+    min-width: 40px;
+    height: 100%;
+    line-height: 32px;
+}
+
+#expand {
+    display: inline-block;
+    min-width: 40px;
+    height: 100%;
+    line-height: 32px;
+}
+
+#cancelSearch {
+    display: inline-block;
+    min-width: 40px;
+    height: 100%;
+    line-height: 32px;
+}
+
+#sIcon:hover,
+#expand:hover,
+#cancelSearch:hover,
+#trello:hover {
+    cursor: pointer;
+}
+
+#trello {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+    margin-right: 300px;
+}
+
+#trello span {
+    font-family: 'Lobster', cursive;
+}
+
+#trello:hover {
+    color: #f1f1f1;
+}
+
+#create {
+    font-size: 35px;
+    width: 35px;
+    margin-right: 5px;
+}
+
+#bell {
+    font-size: 18px;
+    width: 33px;
+    margin-right: 5px;
+}
+
+#setting {
+    font-size: 18px;
+    width: 34px;
+}
+
+#secNav {
     color: #1a2412;
     font-weight: 100;
     text-align: center;
@@ -24,7 +152,7 @@ nav {
     padding: 10px 10px;
 }
 
-nav div div {
+#secNav div div {
     background-color: #8080801e;
     border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -38,15 +166,15 @@ nav div div {
     -o-transition: all 200ms ease-in-out;
 }
 
-nav div div:hover {
+#secNav div div:hover {
     background-color: #1615152d;
 }
 
-#nav1 {
+#snav1 {
     display: flex;
 }
 
-#nav2 {
+#snav2 {
     font-size: 15px;
     display: flex;
 }
@@ -91,7 +219,7 @@ nav div div:hover {
     width: 60px;
 }
 
-#bell {
+#butler {
     width: 80px;
 }
 
@@ -101,8 +229,9 @@ nav div div:hover {
 }
 
 #lists {
-    overflow-x: auto;
     width: 100vw;
+    height: calc(100vh - 70px);
+    overflow: auto;
     display: flex;
     flex-direction: row;
 }
@@ -119,6 +248,7 @@ nav div div:hover {
 .list {
     min-width: 250px;
     max-width: 250px;
+    height: fit-content;
     background-color: #f1f0f0;
     margin-left: 10px;
     padding: 10px;
